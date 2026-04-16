@@ -1,0 +1,365 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="onlinestyle.css">
+    <script src="script.js" defer></script>
+    <title>Online Ordering</title>
+</head>
+<body>
+    <header><button onclick="button"><a href="index.html">Back to Home</a></button></header>
+    <h1>Online Ordering</h1>
+
+    <article id="menu">
+        <div class="container">
+            <div class="menu_wrapper">
+                <h1>Our Menu</h1>
+                <div class="menu_items_header">
+                    <h2>Tacos</h2>
+                    <div class="menu_items">
+                        <div class="menu-card">
+                            <h3>Asada</h3>
+                            <p>$3.00</p>
+                            <img src="./images/asada.jpg" alt="Asada taco">
+                            <button onclick="addToCart('Asada', 3.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Guisada</h3>
+                            <p>$3.00</p>
+                            <img src="./images/guisada.jpg" alt="Guisada taco">
+                            <button onclick="addToCart('Guisada', 3.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Beef Fajita</h3>
+                            <p>$3.00</p>
+                            <img src="./images/beef fajita.jpg" alt="Beef Fajita taco">
+                            <button onclick="addToCart('Beef Fajita', 3.00)">Add to Cart</button>   
+                        </div>
+                        <div class="menu-card">
+                            <h3>Chicken Fajita</h3>
+                            <p>$3.00</p>
+                            <img src="./images/chicken fajita.jpg" alt="Chicken Fajita taco">
+                            <button onclick="addToCart('Chicken Fajita', 3.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Pastor</h3>
+                            <p>$3.00</p>
+                            <img src="./images/pastor.jpg" alt="Pastor taco">
+                            <button onclick="addToCart('Pastor', 3.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Picadillo</h3>
+                            <p>$3.00</p>
+                            <img src="./images/picadillo.jpg" alt="Picadillo taco">
+                            <button onclick="addToCart('Picadillo', 3.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Chicharon</h3>
+                            <p>$3.00</p>
+                            <img src="./images/chicharron.jpg" alt="Chicharon taco">
+                            <button onclick="addToCart('Chicharon', 3.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Machacado</h3>
+                            <p>$3.00</p>
+                            <img src="./images/machacado.jpg" alt="Machacado taco">
+                            <button onclick="addToCart('Machacado', 3.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Bacon & Egg</h3>
+                            <p>$2.50</p>
+                            <img src="./images/bacon_and_egg.jpg" alt="Bacon & Egg taco">
+                            <button onclick="addToCart('Bacon & Egg', 2.50)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Papa Ranchera</h3>
+                            <p>$2.50</p>
+                            <img src="./images/papa_ranchera.jpg" alt="Papa Ranchera taco">
+                            <button onclick="addToCart('Papa Ranchera', 2.50)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Jamon & Huevos</h3>
+                            <p>$2.50</p>
+                            <img src="./images/jamon_con_huevo.jpg" alt="Jamon & Huevos taco">
+                            <button onclick="addToCart('Jamon & Huevos', 2.50)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Chorizo & Egg</h3>
+                            <p>$2.50</p>
+                            <img src="./images/chorizo_and_egg.jpg" alt="Chorizo & Egg taco">
+                            <button onclick="addToCart('Chorizo & Egg', 2.50)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Chilaquiles</h3>
+                            <p>$2.50</p>
+                            <img src="./images/Chilaquiles.jpg" alt="Chilaquiles taco">
+                            <button onclick="addToCart('Chilaquiles', 2.50)">Add to Cart</button>
+                        </div>
+                            <div class="menu-card">
+                            <h3>Migas</h3>
+                            <p>$2.50</p>
+                            <img src="./images/migas.jpg" alt="Migas taco">
+                            <button onclick="addToCart('Migas', 2.50)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Bean & Chorizo</h3>
+                            <p>$2.50</p>
+                            <img src="./images/bean_and_chorizo.jpg" alt="Bean & Chorizo taco">
+                            <button onclick="addToCart('Bean & Chorizo', 2.50)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Bean & Cheese & Bacon</h3>
+                            <p>$2.50</p>
+                            <img src="./images/bean_and_cheese_and_bacon.jpg" alt="Bean & Cheese & Bacon taco">
+                            <button onclick="addToCart('Bean & Cheese & Bacon', 2.50)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Bean & Bacon</h3>
+                            <p>$2.50</p>
+                            <img src="./images/bean_and_bacon.jpg" alt="Bean & Bacon taco">
+                            <button onclick="addToCart('Bean & Bacon', 2.50)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Bean & Cheese</h3>
+                            <p>$2.00</p>
+                            <img src="./images/bean_and_cheese.jpg" alt="Bean & Cheese taco">
+                            <button onclick="addToCart('Bean & Cheese', 2.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Potato & Egg</h3>
+                            <p>$2.00</p>
+                            <img src="./images/potato_and_egg.jpg" alt="Potato & Egg taco">
+                            <button onclick="addToCart('Potato & Egg', 2.00)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>    
+                <div class="menu_plates_header">
+                    <h2>Plates</h2>
+                    <div class="menu_plates">
+                        <div class="menu-card">
+                            <h3>Asada</h3>
+                            <p>$10.00</p>
+                            <img src="./images/asada.jpg" alt="Asada plate">
+                            <button onclick="addToCart('Asada Plate', 10.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Guisada</h3>
+                            <p>$10.00</p>
+                            <img src="./images/guisada.jpg" alt="Guisada plate">
+                            <button onclick="addToCart('Guisada Plate', 10.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Beef Fajita</h3>
+                            <p>$10.00</p>
+                            <img src="./images/beef fajita.jpg" alt="Beef Fajita plate">
+                            <button onclick="addToCart('Beef Fajita Plate', 10.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Chicken Fajita</h3>
+                            <p>$10.00</p>
+                            <img src="./images/chicken fajita.jpg" alt="Chicken Fajita plate">
+                            <button onclick="addToCart('Chicken Fajita Plate', 10.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Pastor</h3>
+                            <p>$10.00</p>
+                            <img src="./images/pastor.jpg" alt="Pastor plate">
+                            <button onclick="addToCart('Pastor Plate', 10.00)">Add to Cart</button>
+                        </div>                    
+                        <div class="menu-card">
+                            <h3>Asada</h3>
+                            <p>$10.00</p>
+                            <img src="./images/asada.jpg" alt="Asada plate">
+                            <button onclick="addToCart('Asada Plate', 10.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Guisada</h3>
+                            <p>$10.00</p>
+                            <img src="./images/guisada.jpg" alt="Guisada plate">
+                            <button onclick="addToCart('Guisada Plate', 10.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Beef Fajita</h3>
+                            <p>$10.00</p>   
+                            <img src="./images/beef fajita.jpg" alt="Beef Fajita plate">
+                            <button onclick="addToCart('Beef Fajita Plate', 10.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Chicken Fajita</h3>
+                            <p>$10.00</p>
+                            <img src="./images/chicken fajita.jpg" alt="Chicken Fajita plate">
+                            <button onclick="addToCart('Chicken Fajita Plate', 10.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Pastor</h3>
+                            <p>$10.00</p>
+                            <img src="./images/pastor.jpg" alt="Pastor plate">
+                            <button onclick="addToCart('Pastor Plate', 10.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Picadillo</h3>
+                            <p>$8.00</p>
+                            <img src="./images/picadillo.jpg" alt="Picadillo plate">
+                            <button onclick="addToCart('Picadillo Plate', 8.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Chicharon</h3>
+                            <p>$8.50</p>
+                            <img src="./images/chicharron.jpg" alt="Chicharon plate">
+                            <button onclick="addToCart('Chicharon Plate', 8.50)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Machacado</h3>
+                            <p>$6.00</p>
+                            <img src="./images/machacado.jpg" alt="Machacado plate">
+                            <button onclick="addToCart('Machacado Plate', 6.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Migas</h3>
+                            <p>$6.00</p>
+                            <img src="./images/migas.jpg" alt="Migas plate">
+                            <button onclick="addToCart('Migas Plate', 6.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Chilaquiles</h3>
+                            <p>$8.00</p>
+                            <img src="./images/Chilaquiles.jpg" alt="Chilaquiles plate">
+                            <button onclick="addToCart('Chilaquiles Plate', 8.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Huevos Al Gusto</h3>
+                            <p>$6.00</p>
+                            <img src="./images/huevos_al_gusto.jpg" alt="Huevos Al Gusto plate">
+                            <button onclick="addToCart('Huevos Al Gusto Plate', 6.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Huevos Con Porkchop</h3>
+                            <p>$7.00</p>
+                            <img src="./images/huevos_con_porkchop.jpg" alt="Huevos Con Porkchop plate">
+                            <button onclick="addToCart('Huevos Con Porkchop Plate', 7.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Huevos Rancheros</h3>
+                            <p>$4.50</p>
+                            <img src="./images/huevos_rancheros.jpg" alt="Huevos Rancheros plate">
+                            <button onclick="addToCart('Huevos Rancheros Plate', 4.50)">Add to Cart</button>
+                        </div>  
+                    </div>
+                </div>
+                <div class="menu_specialty_header">
+                    <h2>Specialty</h2>
+                    <div class="menu_specialty">
+                        <div class="menu-card">
+                            <h3>Mini Tacos</h3>
+                            <p>$9.00</p>
+                            <img src="./images/mini_tacos.jpg" alt="Mini Tacos plate">
+                            <button onclick="addToCart('Mini Tacos Plate', 9.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Menudo</h3>
+                            <p>$8.50</p>
+                            <img src="./images/menudo.jpg" alt="Menudo plate">
+                            <button onclick="addToCart('Menudo Plate', 8.50)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Gordita Plate</h3>
+                            <p>$8.50</p>
+                            <img src="./images/gordita_plate.jpg" alt="Gordita Plate">
+                            <button onclick="addToCart('Gordita Plate', 8.50)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Huaraches</h3>
+                            <p>$8.00</p>
+                            <img src="./images/huaraches.jpg" alt="Huaraches Plate">
+                            <button onclick="addToCart('Huaraches Plate', 8.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Tortas</h3>
+                            <p>$8.00</p>
+                            <img src="./images/torta.jpg" alt="Tortas Plate">
+                            <button onclick="addToCart('Tortas Plate', 8.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Burritos</h3>
+                            <p>$8.00</p>
+                            <img src="./images/burrito.jpg" alt="Burritos Plate">
+                            <button onclick="addToCart('Burritos Plate', 8.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Quesadillas</h3>
+                            <p>$8.00</p>
+                            <img src="./images/quesadilla.jpg" alt="Quesadillas Plate">
+                            <button onclick="addToCart('Quesadillas Plate', 8.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Hamburgers</h3>
+                            <p>$8.00</p>
+                            <img src="./images/hamburger.jpg" alt="Hamburgers Plate">
+                            <button onclick="addToCart('Hamburgers Plate', 8.00)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu_drinks_header">   
+                    <h2>Drinks</h2>
+                    <div class="menu_drinks">
+                        <div class="menu-card">
+                            <h3>Mexican Soda</h3>
+                            <p>$3.00</p>
+                            <img src="./images/mexican_soda.jpg" alt="Mexican Soda">
+                            <button onclick="addToCart('Mexican Soda', 3.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Coffee</h3>
+                            <p>$2.50</p>
+                            <img src="./images/coffee.jpg" alt="Coffee">
+                            <button onclick="addToCart('Coffee', 2.50)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Can Soda</h3>
+                            <p>$1.00</p>
+                            <img src="./images/can_soda.jpg" alt="Can Soda">
+                            <button onclick="addToCart('Can Soda', 1.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-card">
+                            <h3>Bottled Water</h3>
+                            <p>$1.00</p>
+                            <img src="./images/water.jpg" alt="Bottled Water">
+                            <button onclick="addToCart('Bottled Water', 1.00)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>       
+            </div>
+        </div>
+    </article>
+    <section id="cart">
+        <h2>Your Order</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="total">0.00</span></p>
+</section>
+<section id="checkout">
+    <h2>Pickup Order</h2>
+
+    <form id="order-form">
+        <input type="text" id="name" placeholder="Your Name" required>
+
+        <select id="pickup-time" required>
+            <option value="">Select Pickup Time</option>
+            <option value="ASAP">ASAP (15–20 min)</option>
+            <option value="30">In 30 minutes</option>
+            <option value="60">In 1 hour</option>
+        </select>
+
+        <select id="payment" required>
+            <option value="">Payment Method</option>
+            <option value="cash">Pay at Pickup (Cash)</option>
+            <option value="card">Pay at Pickup (Card)</option>
+        </select>
+
+        <button type="submit">Place Order</button>
+    </form>
+</section>
+<p class="pickup-note">
+    📍 Pickup only — no delivery available.
+</p>
+</body>
+</html>

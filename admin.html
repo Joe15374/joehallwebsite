@@ -1,0 +1,188 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Orders</title>
+</head>
+<body>
+
+<script>
+const ADMIN_PASSWORD = "MarybaldoMatt$";
+let attempts = 0;
+const MAX_ATTEMPTS = 3;
+
+// Check if locked
+if (localStorage.getItem("adminLocked") === "true") {
+    document.body.innerHTML = "<h1>🔒 Too many failed attempts. Access locked.</h1>";
+} else {
+    login();
+}
+
+function login() {
+    while (attempts < MAX_ATTEMPTS) {
+        const password = prompt("Enter admin password:");
+
+        if (password === ADMIN_PASSWORD) {
+            alert("Access granted");
+            return; // allow page to load normally
+        } else {
+            attempts++;
+            alert(`Wrong password! Attempts left: ${MAX_ATTEMPTS - attempts}`);
+        }
+    }
+
+    // Lock after too many attempts
+    localStorage.setItem("adminLocked", "true");
+    document.body.innerHTML = "<h1>🔒 Too many failed attempts. Access locked.</h1>";
+}
+</script>
+
+<h1>📋 Live Orders</h1>
+<div id="orders"></div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"></script>
+
+<script>
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_PROJECT.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
+};
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
+const ordersDiv = document.getElementById("orders");
+
+// REAL-TIME LISTENER 🔥
+db.collection("orders")
+.orderBy("createdAt", "desc")
+.onSnapshot(snapshot => {
+    ordersDiv.innerHTML = "";
+
+    snapshot.forEach(doc => {
+        const order = doc.data();
+
+        const div = document.createElement("div");
+        div.style.border = "1px solid black";
+        div.style.margin = "10px";
+        div.style.padding = "10px";
+
+        div.innerHTML = `
+            <h3>${order.name}</h3>
+            <p><strong>Pickup:</strong> ${order.pickupTime}</p>
+            <p><strong>Payment:</strong> ${order.payment}</p>
+            <p><strong>Total:</strong> $${order.total}</p>
+            <ul>
+                ${order.items.map(i => `<li>${i.item} - $${i.price}</li>`).join("")}
+            </ul>
+        `;
+
+        ordersDiv.appendChild(div);
+    });
+});
+</script>
+
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Orders</title>
+</head>
+<body>
+
+<h1>📋 Live Orders</h1>
+<div id="orders"></div>
+
+<script>
+/* =========================
+   SIMPLE ADMIN LOGIN
+========================= */
+const ADMIN_PASSWORD = "MarybaldoMatt$";
+const MAX_ATTEMPTS = 3;
+
+let attempts = 0;
+
+if (localStorage.getItem("adminLocked") === "true") {
+    document.body.innerHTML = "<h1>🔒 Access Locked</h1>";
+} else {
+    login();
+}
+
+function login() {
+    while (attempts < MAX_ATTEMPTS) {
+        const password = prompt("Enter admin password:");
+
+        if (password === ADMIN_PASSWORD) {
+            alert("Access granted");
+            return;
+        } else {
+            attempts++;
+            alert(`Wrong password! Attempts left: ${MAX_ATTEMPTS - attempts}`);
+        }
+    }
+
+    localStorage.setItem("adminLocked", "true");
+    document.body.innerHTML = "<h1>🔒 Access Locked</h1>";
+}
+</script>
+
+<!-- Firebase COMPAT version (IMPORTANT FIX) -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+
+<script>
+const firebaseConfig = {
+  apiKey: "YOUR_KEY",
+  authDomain: "YOUR_PROJECT.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
+};
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+</script>
+
+/* =========================
+   REAL-TIME ORDERS
+========================= */
+const ordersDiv = document.getElementById("orders");
+
+db.collection("orders")
+.orderBy("createdAt", "desc")
+.onSnapshot(snapshot => {
+
+    ordersDiv.innerHTML = "";
+
+    snapshot.forEach(doc => {
+        const order = doc.data();
+
+        const div = document.createElement("div");
+
+        div.style.border = "1px solid #ccc";
+        div.style.margin = "10px";
+        div.style.padding = "10px";
+        div.style.borderRadius = "8px";
+        div.style.background = "#f9f9f9";
+
+        div.innerHTML = `
+            <h3>👤 ${order.name}</h3>
+            <p><strong>Pickup:</strong> ${order.pickupTime}</p>
+            <p><strong>Payment:</strong> ${order.payment}</p>
+            <p><strong>Total:</strong> $${order.total.toFixed(2)}</p>
+            <ul>
+                ${order.items.map(i => 
+                    `<li>${i.item} - $${i.price.toFixed(2)}</li>`
+                ).join("")}
+            </ul>
+        `;
+
+        ordersDiv.appendChild(div);
+    });
+});
+</script>
+
+</body>
+</html>

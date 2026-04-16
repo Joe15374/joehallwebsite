@@ -1,0 +1,234 @@
+<!--<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="onlinestyle.css">
+    <script src="script.js" defer></script>
+    <title>Online Ordering</title>
+</head>
+<body>
+    <header><button onclick="button"><a href="index.html">Back to Home</a></button></header>
+    <h1>Online Ordering</h1>
+
+    <article id="menu">
+        <div class="container">
+            <div class="menu_wrapper">
+                <h1>Our Menu</h1>
+                <div class="menu_items_header">
+                    <h2>Tacos</h2>
+                    <div class="menu-item">
+                        <h3>Asada</h3>
+                        <p>$3.00</p>
+                        <img src="./images/asada.jpg" alt="">
+                        <button onclick="addToCart('Asada', 3.00)">Add to Cart</button>
+                    </div>
+                        <h3>Guisada</h3>
+                        <p>$3.00</p>
+                        <img src="./images/guisada.jpg" alt="">
+                        <h3>Beef Fajita</h3>
+                        <p>$3.00</p>
+                        <img src="./images/beef fajita.jpg" alt="">
+                        <h3>Chicken Fajita</h3>
+                        <p>$3.00</p>
+                        <img src="./images/chicken fajita.jpg" alt="">
+                        <h3>Pastor</h3>
+                        <p>$3.00</p>
+                        <img src="./images/pastor.jpg" alt="">
+                        <h3>Picadillo</h3>
+                        <p>$3.00</p>
+                        <img src="./images/picadillo.jpg" alt="">
+                        <h3>Chicharon</h3>
+                        <p>$3.00</p>
+                        <img src="./images/chicharron.jpg" alt="">
+                        <h3>Machacado</h3>
+                        <p>$3.00</p>
+                        <img src="./images/machacado.jpg" alt="">
+                        <h3>Bacon & Egg</h3>
+                        <p>$2.50</p>
+                        <img src="./images/bacon_and_egg.jpg" alt="">
+                        <h3>Papa Ranchera</h3>
+                        <p>$2.50</p>
+                        <img src="./images/papa_ranchera.jpg" alt="">
+                        <h3>Jamon & Huevos</h3>
+                        <p>$2.50</p>
+                        <img src="./images/jamon_con_huevo.jpg" alt="">
+                        <h3>Chorizo & Egg</h3>
+                        <p>$2.50</p>
+                        <img src="./images/chorizo_and_egg.jpg" alt="">
+                        <h3>Chilaquiles</h3>
+                        <p>$2.50</p>
+                        <img src="./images/Chilaquiles.jpg" alt="">
+                        <h3>Migas</h3>
+                        <p>$2.50</p>
+                        <img src="./images/migas.jpg" alt="">
+                        <h3>Bean & Chorizo</h3>
+                        <p>$2.50</p>
+                        <img src="./images/bean_and_chorizo.jpg" alt="">
+                        <h3>Bean & Cheese & Bacon</h3>
+                        <p>$2.50</p>
+                        <img src="./images/bean_and_cheese_and_bacon.jpg" alt="">
+                        <h3>Bean & Bacon</h3>
+                        <p>$2.50</p>
+                        <img src="./images/bean_and_bacon.jpg" alt="">
+                        <h3>Bean & Cheese</h3>
+                        <p>$2.00</p>
+                        <img src="./images/bean_and_cheese.jpg" alt="">
+                        <h3>Potato & Egg</h3>
+                        <p>$2.00</p>
+                        <img src="./images/potato_and_egg.jpg" alt="">
+                    </div>
+                </div>    
+                <div class="menu_plates_header">
+                    <h2>Plates</h2>
+                    <div class="menu_plates">
+                        <h3>Asada</h3>
+                        <p>$10.00</p>
+                        <img src="./images/asada.jpg" alt="">
+                        <h3>Guisada</h3>
+                        <p>$10.00</p>
+                        <img src="./images/guisada.jpg" alt="">
+                        <h3>Beef Fajita</h3>
+                        <p>$10.00</p>   
+                        <img src="./images/beef fajita.jpg" alt="">
+                        <h3>Chicken Fajita</h3>
+                        <p>$10.00</p>
+                        <img src="./images/chicken fajita.jpg" alt="">
+                        <h3>Pastor</h3>
+                        <p>$10.00</p>
+                        <img src="./images/pastor.jpg" alt="">
+                        <h3>Picadillo</h3>
+                        <p>$8.00</p>
+                        <img src="./images/picadillo.jpg" alt="">
+                        <h3>Chicharon</h3>
+                        <p>$8.50</p>
+                        <img src="./images/chicharron.jpg" alt="">
+                        <h3>Machacado</h3>
+                        <p>$6.00</p>
+                        <img src="./images/machacado.jpg" alt="">
+                        <h3>Migas</h3>
+                        <p>$6.00</p>
+                        <img src="./images/migas.jpg" alt="">
+                        <h3>Chilaquiles</h3>
+                        <p>$8.00</p>
+                        <img src="./images/Chilaquiles.jpg" alt="">
+                        <h3>Huevos Al Gusto</h3>
+                        <p>$6.00</p>
+                        <img src="./images/huevos_al_gusto.jpg" alt="">
+                        <h3>Huevos Con Porkchop</h3>
+                        <p>$7.00</p>
+                        <img src="./images/huevos_con_porkchop.jpg" alt="">
+                        <h3>Huevos Rancheros</h3>
+                        <p>$4.50</p>
+                        <img src="./images/huevos_rancheros.jpg" alt="">
+                    </div>  
+                </div>
+                <div class="menu_specialty_header">
+                    <h2>Specialty</h2>
+                    <div class="menu_specialty">
+                        <h3>Mini Tacos</h3>
+                        <p>$9.00</p>
+                        <img src="./images/mini_tacos.jpg" alt="">
+                        <h3>Menudo</h3>
+                        <p>$8.50</p>
+                        <img src="./images/menudo.jpg" alt="">
+                        <h3>Gordita Plate</h3>
+                        <p>$8.50</p>
+                        <img src="./images/gordita_plate.jpg" alt="">
+                        <h3>Huaraches</h3>
+                        <p>$8.00</p>
+                        <img src="./images/huaraches.jpg" alt="">
+                        <h3>Tortas</h3>
+                        <p>$8.00</p>
+                        <img src="./images/torta.jpg" alt="">
+                        <h3>Burritos</h3>
+                        <p>$8.00</p>
+                        <img src="./images/burrito.jpg" alt="">
+                        <h3>Quesadillas</h3>
+                        <p>$8.00</p>
+                        <img src="./images/quesadilla.jpg" alt="">
+                        <h3>Hamburgers</h3>
+                        <p>$8.00</p>
+                        <img src="./images/hamburger.jpg" alt="">
+                    </div>
+                </div>
+                <div class="menu_drinks_header">   
+                    <h2>Drinks</h2>
+                    <div class="menu_drinks">
+                        <h3>Mexican Soda</h3>
+                        <p>$3.00</p>
+                        <img src="./images/mexican_soda.jpg" alt="">
+                        <h3>Coffee</h3>
+                        <p>$2.50</p>
+                        <img src="./images/coffee.jpg" alt="">
+                        <h3>Can Soda</h3>
+                        <p>$1.00</p>
+                        <img src="./images/can_soda.jpg" alt="">
+                        <h3>Bottled Water</h3>
+                        <p>$1.00</p>
+                        <img src="./images/water.jpg" alt="">
+                    </div>
+                </div>       
+            </div>
+        </div>
+    </article>
+    <section id="cart">
+    <h2>Your Order</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="total">0.00</span></p>
+</section>
+</body>
+</html>-->
+
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"></script>
+___________________________________________________________________________________
+customer page (online ordering)
+admin page
+
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+
+<script>
+const firebaseConfig = {
+  apiKey: "YOUR_KEY",
+  authDomain: "YOUR_PROJECT.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
+};
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+</script>
+
+
+___________________________________________________________________________________
+const firebaseConfig = {
+  apiKey: "...",
+  authDomain: "...",
+  projectId: "...",
+  storageBucket: "...",
+  messagingSenderId: "...",
+  appId: "..."
+};
+COPY THIS — you will paste it into BOTH pages.
+
+____________________________________________________________________________________
+admin page this is what shows orders in real 
+
+db.collection("orders")
+.orderBy("createdAt", "desc")
+.onSnapshot(snapshot => {
+    ordersDiv.innerHTML = "";
+
+    snapshot.forEach(doc => {
+        const order = doc.data();
+
+        ordersDiv.innerHTML += `
+            <div>
+                <h3>${order.name}</h3>
+                <p>${order.pickupTime}</p>
+                <p>${order.payment}</p>
+                <p>$${order.total}</p>
+            </div>
+        `;
+    });
+});
